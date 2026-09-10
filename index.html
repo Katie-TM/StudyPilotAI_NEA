@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyPilot AI | Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div><a class="brand" href="index.html"><span class="brand-mark">S</span><span>StudyPilot <b>AI</b></span></a>
+  <nav>
+    <a class="nav-link active" href="index.html"><span>⌂</span> Dashboard</a>
+    <a class="nav-link" href="planner.html"><span>▣</span> Planner</a>
+    <a class="nav-link" href="ai-planner.html"><span>✦</span> AI Planner</a>
+    <a class="nav-link" href="progress.html"><span>◒</span> Progress</a>
+    <a class="nav-link" href="timer.html"><span>◷</span> Timer</a>
+  </nav></div>
+  <div class="sidebar-footer"><button class="theme-btn" id="themeBtn" onclick="toggleTheme()">☀️</button><span>Focus mode</span></div>
+</aside>
+<main class="main-content">
+  <header class="topbar"><div><p class="eyebrow">YOUR STUDY SPACE</p><h1>Welcome back 👋</h1><p class="muted" id="quote">Small progress is still progress.</p></div><a class="top-action" href="ai-planner.html">✦ Build AI timetable</a></header>
+  <section class="hero-card"><div><span class="pill">SMART REVISION</span><h2>Study smarter, not longer.</h2><p>Add your subjects and let StudyPilot AI build a revision plan around difficulty, exam dates and your available study time.</p><a class="button button-light" href="planner.html">Add my subjects →</a></div><div class="hero-orb">✦</div></section>
+  <section class="stats-grid">
+    <article class="stat-card"><span>📚</span><p>Subjects</p><strong id="tasks">0</strong></article>
+    <article class="stat-card"><span>⏱</span><p>Planned hours</p><strong id="hours">0</strong></article>
+    <article class="stat-card"><span>🔥</span><p>Study streak</p><strong id="streakCount">0 days</strong></article>
+    <article class="stat-card"><span>🏆</span><p>Badges</p><strong id="badgeCount">0 earned</strong></article>
+  </section>
+  <section class="content-grid">
+    <article class="panel"><div class="panel-head"><div><p class="eyebrow">THIS WEEK</p><h2>Weekly progress</h2></div><span class="progress-label" id="progressLabel">0%</span></div><div class="progress-track"><div id="progressBar" class="progress-fill"></div></div><p class="muted">Keep adding subjects and completing focused sessions to build momentum.</p></article>
+    <article class="panel"><div class="panel-head"><div><p class="eyebrow">UP NEXT</p><h2>Upcoming exams</h2></div></div><div id="upcomingExams" class="exam-list"><p class="empty-state">Add a subject to see upcoming exams.</p></div></article>
+  </section>
+</main></div>
+<div id="cookiePopup" class="modal-backdrop"><div class="cookie-modal"><span class="modal-icon">🍪</span><h2>Do you allow cookies?</h2><p>StudyPilot uses essential browser storage to remember your subjects, theme and study progress. No advertising cookies are required.</p><div class="modal-actions"><button class="button button-ghost" onclick="setCookieChoice(false)">Only essential</button><button class="button" onclick="setCookieChoice(true)">Allow cookies</button></div></div></div>
+<script src="js/script.js"></script>
+</body></html>
